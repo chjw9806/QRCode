@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 
+
 public class MainActivity extends AppCompatActivity {
     //private Button createQRBtn;
     private Button scanQRBtn;
