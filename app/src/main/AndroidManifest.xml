@@ -11,18 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QRCode">
-        <activity android:name=".ListActivity"></activity>
+        <activity android:name=".ListActivity"
+            android:label="주문내역"></activity>
         <activity
             android:name=".OrderActivity"
             android:label="카테고리" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity"
+            android:label="카카오톡으로 로그인하기"/>
         <activity android:name=".ScanQR" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"
             tools:replace="screenOrientation" />
         <activity android:name=".CreateQR" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:label="">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
