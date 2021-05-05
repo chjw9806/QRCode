@@ -1,9 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".OrderActivity">
 
+    <Button
+        android:id="@+id/btnHS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="한식" />
+
+    <Button
+        android:id="@+id/btnBS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="분식" />
+
+    <Button
+        android:id="@+id/btnCK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="치킨" />
+
+    <Button
+        android:id="@+id/btnPZ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="피자" />
+
+    <Button
+        android:id="@+id/btnES"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="돈까스/회/일식" />
+
+    <Button
+        android:id="@+id/btnASA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="아시안/양식" />
+
+    <Button
+        android:id="@+id/btnJB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="족발/보쌈" />
+
+    <Button
+        android:id="@+id/btnCS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="중국집" />
+
+    <Button
+        android:id="@+id/btnGG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="찜/탕" />
+
+    <Button
+        android:id="@+id/btnDO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="도시락" />
+
+    <Button
+        android:id="@+id/btnFST"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="패스트푸드" />
+
+    <Button
+        android:id="@+id/btnCafe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="카페/디저트" />
 </>

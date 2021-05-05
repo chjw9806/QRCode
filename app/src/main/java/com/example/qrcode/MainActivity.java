@@ -11,7 +11,8 @@ import com.google.zxing.integration.android.IntentIntegrator;
 
 public class MainActivity extends AppCompatActivity {
     //private Button createQRBtn;
-    private Button scanQRBtn;
+    private Button scanQRBtn, btnOrder, btnLogin, btnList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
 
         //createQRBtn = (Button) findViewById(R.id.createQR);
         scanQRBtn = (Button) findViewById(R.id.scanQR);
+        btnOrder = findViewById(R.id.btnOrder);
+        btnList = findViewById(R.id.btnList);
+        btnLogin = findViewById(R.id.btnLogin);
+
+
 
         /*createQRBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -34,5 +40,27 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+       btnOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,OrderActivity.class);
+                startActivity(intent);
+            }
+        });
+       btnLogin.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+               startActivity(intent);
+           }
+       });
+       btnList.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(MainActivity.this, ListActivity.class);
+               startActivity(intent);
+           }
+       });
     }
 }
