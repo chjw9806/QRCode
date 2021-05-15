@@ -60,8 +60,8 @@
         android:id="@+id/logout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="logout"
         android:layout_marginBottom="42dp"
+        android:text="logout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
