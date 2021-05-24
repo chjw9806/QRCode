@@ -2,104 +2,72 @@ package com.example.qrcode;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 public class OrderActivity extends AppCompatActivity {
-    Button btnHS, btnBS, btnCK, btnPZ,btnES, btnASA, btnJB, btnCS,btnGG, btnDO, btnFST, btnCafe;
+
+    Button button,button2,button3;
+    FirebaseDatabase database;
+    DatabaseReference reference;
+
+    int i = 0;
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = firebaseDatabase.getReference();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_order);
+        setContentView(R.layout.activity_main);
 
-        btnHS = findViewById(R.id.btnHS);
-        btnBS = findViewById(R.id.btnBS);
-        btnCK = findViewById(R.id.btnCK);
-        btnPZ = findViewById(R.id.btnPZ);
-        btnES = findViewById(R.id.btnES);
-        btnASA = findViewById(R.id.btnASA);
-        btnJB = findViewById(R.id.btnJB);
-        btnCS = findViewById(R.id.btnCS);
-        btnGG = findViewById(R.id.btnGG);
-        btnDO = findViewById(R.id.btnDO);
-        btnFST = findViewById(R.id.btnFST);
-        btnCafe = findViewById(R.id.btnCafe);
+        button = findViewById(R.id.button);
+        button2 = findViewById(R.id.button2);
+        button3 = findViewById(R.id.button3);
 
-        btnHS.setOnClickListener(new View.OnClickListener() {
+
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                databaseReference.child("message").push().setValue("아이스 카페 아메리카노");
+                databaseReference.child("message").child("아이스 카페 아메리카노").push().setValue("아이스 카페 아메리카노");
+                Intent intent = new Intent(getApplicationContext(), ordersheet.class);
+                startActivity(intent);
             }
         });
-        btnBS.setOnClickListener(new View.OnClickListener() {
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                databaseReference.child("message").push().setValue("아이스 카페 라떼");
+                Intent intent = new Intent(getApplicationContext(), ordersheet.class);
+                startActivity(intent);
             }
         });
-        btnCK.setOnClickListener(new View.OnClickListener() {
+        button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-            }
-        });
-        btnPZ.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        btnES.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        btnASA.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        btnJB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        btnCS.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        btnGG.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        btnDO.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        btnFST.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        btnCafe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
+                databaseReference.child("message").push().setValue("아이스 바닐라 라떼");
+                Intent intent = new Intent(getApplicationContext(), ordersheet.class);
+                startActivity(intent);
             }
         });
 
+        FirebaseDatabase.getInstance().getReference().addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    Log.d("MainActivity", "Single ValueEventListener : " + snapshot.getValue());
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
 
