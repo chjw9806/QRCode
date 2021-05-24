@@ -10,7 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.kakao.sdk.auth.model.OAuthToken;
 import com.kakao.sdk.user.UserApiClient;
 import com.kakao.sdk.user.model.User;
@@ -27,7 +28,10 @@ public class MainActivity extends AppCompatActivity {
     private View loginButton, logoutButton;
     private TextView nickname;
     private ImageView profileImage;
-    private Button scanQRBtn, btnOrder, btnList;
+    private Button Orderbtn, btnOrder, btnList;
+
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = firebaseDatabase.getReference();
 
 
     @Override
@@ -36,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //createQRBtn = (Button) findViewById(R.id.createQR);
-        scanQRBtn = (Button) findViewById(R.id.scanQR);
+        //scanQRBtn = (Button) findViewById(R.id.Orderbtn);
+        Orderbtn= findViewById(R.id.Orderbtn);
         btnOrder = findViewById(R.id.btnOrder);
         btnList = findViewById(R.id.btnList);
 
@@ -94,21 +99,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
-        scanQRBtn.setOnClickListener(new View.OnClickListener(){
+        Orderbtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this, ScanQR.class);
+                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
                 startActivity(intent);
+
+                //Intent intent = new Intent(getApplicationContext(), OrderActivity.class);
+               // startActivity(intent);
             }
         });
-
-       btnOrder.setOnClickListener(new View.OnClickListener() {
+        /*btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,OrderActivity.class);
                 startActivity(intent);
             }
         });
-
+*/
        btnList.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
@@ -133,6 +140,8 @@ public class MainActivity extends AppCompatActivity {
                     Glide.with(profileImage).load(user.getKakaoAccount().getProfile().getThumbnailImageUrl()).circleCrop().into(profileImage);
                     loginButton.setVisibility(View.GONE);
                     logoutButton.setVisibility(View.VISIBLE);
+
+
                 }else{
                     nickname.setText(null);
                     profileImage.setImageBitmap(null);
