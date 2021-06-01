@@ -16,6 +16,10 @@ import com.kakao.sdk.auth.model.OAuthToken;
 import com.kakao.sdk.user.UserApiClient;
 import com.kakao.sdk.user.model.User;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
@@ -28,10 +32,12 @@ public class MainActivity extends AppCompatActivity {
     private View loginButton, logoutButton;
     private TextView nickname;
     private ImageView profileImage;
-    private Button Orderbtn, btnOrder, btnList;
+    private Button Orderbtn, btnOrder, btnList, btnRandom;
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
+
+    Random random = new Random();
 
 
     @Override
@@ -44,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         Orderbtn= findViewById(R.id.Orderbtn);
         btnOrder = findViewById(R.id.btnOrder);
         btnList = findViewById(R.id.btnList);
-
+        btnRandom = findViewById(R.id.btnRandom);
 
         loginButton = findViewById(R.id.login);
         logoutButton = findViewById(R.id.logout);
@@ -123,6 +129,14 @@ public class MainActivity extends AppCompatActivity {
                startActivity(intent);
            }
        });
+
+       btnRandom.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(MainActivity.this,RandomMenuActivity.class);
+               startActivity(intent);
+           }
+       });
     }
     private void updateKakaoLoginUi(){
         UserApiClient.getInstance().me(new Function2<User, Throwable, Unit>() {
@@ -152,4 +166,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }

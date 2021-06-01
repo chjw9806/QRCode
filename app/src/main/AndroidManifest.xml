@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QRCode"
         android:usesCleartextTraffic="true">
-        <activity android:name=".StarbucksOrderActivity"></activity>
+        <activity android:name=".RandomMenuActivity"></activity>
+        <activity android:name=".StarbucksOrderActivity" />
         <activity
             android:name=".ListActivity"
             android:label="주문내역" />
@@ -26,7 +27,6 @@
         <activity
             android:name=".LoginActivity"
             android:label="카카오톡으로 로그인하기" />
-        <activity android:name=".ScanQR" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"

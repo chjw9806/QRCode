@@ -23,8 +23,6 @@ public class OrderActivity extends AppCompatActivity {
 
     Button button,button2,button3;
 
-    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-    private DatabaseReference databaseReference = firebaseDatabase.getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +33,6 @@ public class OrderActivity extends AppCompatActivity {
         button = findViewById(R.id.button);
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
-
 
 
 
@@ -51,58 +48,36 @@ public class OrderActivity extends AppCompatActivity {
        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UserApiClient.getInstance().me(new Function2<User, Throwable, Unit>() {
-                    @Override
-                    public Unit invoke(User user, Throwable throwable) {
-                        if (user != null) {
-                            databaseReference.child("menu").child(user.getKakaoAccount().getProfile().getNickname()).push().setValue("아이스 카페 아메리카노");
-                            Intent intent = new Intent(getApplicationContext(), StarbucksOrderActivity.class);
-                            startActivity(intent);
 
-                        }else{
+                Intent intent1 = new Intent(getApplicationContext(), StarbucksOrderActivity.class);
+                intent1.putExtra("americano","아이스 카페 아메리카노");
+                startActivity(intent1);
 
-                        }
-                        return null;
-                    }
-                });
+
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UserApiClient.getInstance().me(new Function2<User, Throwable, Unit>() {
-                    @Override
-                    public Unit invoke(User user, Throwable throwable) {
-                        if (user != null) {
-                            databaseReference.child("menu").child(user.getKakaoAccount().getProfile().getNickname()).push().setValue("아이스 카페 라떼");
-                            Intent intent = new Intent(getApplicationContext(), StarbucksOrderActivity.class);
-                            startActivity(intent);
+                {
 
-                        }else{
+                    Intent intent2 = new Intent(getApplicationContext(), StarbucksOrderActivity.class);
+                    intent2.putExtra("cafelatte", "아이스 카페라떼");
+                    startActivity(intent2);
 
-                        }
-                        return null;
-                    }
-                });
+
+                }
             }
         });
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UserApiClient.getInstance().me(new Function2<User, Throwable, Unit>() {
-                    @Override
-                    public Unit invoke(User user, Throwable throwable) {
-                        if (user != null) {
-                            databaseReference.child("menu").child(user.getKakaoAccount().getProfile().getNickname()).push().setValue("아이스 바닐라 라떼");
-                            Intent intent = new Intent(getApplicationContext(), StarbucksOrderActivity.class);
-                            startActivity(intent);
 
-                        }else{
+                Intent intent3 = new Intent(getApplicationContext(), StarbucksOrderActivity.class);
+                intent3.putExtra("vanillalatte","아이스 바닐라 라떼");
+                startActivity(intent3);
 
-                        }
-                        return null;
-                    }
-                });
+
             }
         });
 
