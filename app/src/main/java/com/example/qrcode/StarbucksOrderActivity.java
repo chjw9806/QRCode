@@ -37,8 +37,7 @@ public class StarbucksOrderActivity extends AppCompatActivity {
     String Americano;
     String Cafelatte;
     String Vanillalatte;
-
-     static int i =0;
+    static int i =0;
 
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();

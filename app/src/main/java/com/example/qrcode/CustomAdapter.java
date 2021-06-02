@@ -30,7 +30,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
     //실제 리스트뷰가 어댑터에 연결된 다음에 뷰 홀더를 최초로 만들어낸다.
     public CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.orderlist_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.orderlist_items, parent, false);
         CustomViewHolder holder = new CustomViewHolder(view);
         return holder;
     }
@@ -42,12 +42,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         holder.tv_Details.setText("요청사항 : "+arrayList.get(position).getDetails());
 
     }
-
-
+    
+    @Override
     public int getItemCount() {
-        // 삼항 연산자
         return (arrayList != null ? arrayList.size() : 0);
     }
+
 
     public class CustomViewHolder extends RecyclerView.ViewHolder {
         TextView tv_Drink;
