@@ -20,21 +20,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="7dp"
-                android:text="주문음료" />
+                android:text="주문음료"
+                android:textAlignment="viewStart"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_OrderTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="7dp"
-                android:text="주문일시" />
+                android:text="주문일시"
+                android:textAlignment="viewStart"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_Details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="7dp"
-                android:text="요청사항" />
+                android:text="요청사항"
+                android:textAlignment="viewStart"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
