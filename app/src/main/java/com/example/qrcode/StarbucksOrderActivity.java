@@ -38,10 +38,11 @@ public class StarbucksOrderActivity extends AppCompatActivity {
     String Cafelatte;
     String Vanillalatte;
 
+     static int i =0;
 
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-    private DatabaseReference databaseReference = firebaseDatabase.getReference();
+    private DatabaseReference databaseReference = firebaseDatabase.getReference("sample");
 
 
     @Override
@@ -78,15 +79,17 @@ public class StarbucksOrderActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                i++;
+
                 UserApiClient.getInstance().me(new Function2<User, Throwable, Unit>() {
                     @Override
                     public Unit invoke(User user, Throwable throwable) {
                         DrinkDetails = orderEdit.getText().toString();
 
 
-                        Menu menu = new Menu(DrinkName,DrinkDetails,OrderTime);
+                         Menu menu = new Menu(DrinkName,DrinkDetails,OrderTime);
 
-                        databaseReference.child("menu").child(user.getKakaoAccount().getProfile().getNickname()).push().setValue(menu);
+                        databaseReference.child("menu").child(user.getKakaoAccount().getProfile().getNickname()).child(i+"번째 주문").setValue(menu);
 
                         return null;
 
