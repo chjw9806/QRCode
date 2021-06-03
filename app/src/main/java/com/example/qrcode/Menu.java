@@ -39,8 +39,8 @@ public class Menu {
         this.drink = drink;
     }
 
-  private  String details;
-  private String drink;
+    private  String details;
+      private String drink;
 
     public Menu(){
     }
@@ -51,8 +51,8 @@ public class Menu {
         this.drink = drink;
         this.formatDate = formatDate;
 
+
+
     }
 
-
-
-}
+    }
