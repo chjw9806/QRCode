@@ -72,11 +72,11 @@ public class ListActivity extends AppCompatActivity{
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         // firebase 데이터베이스의 데이터를 받아오는 곳
                         // 기존 배열리스트 존재하지 않게 초기화
-                          arrayList.clear();
-                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) { // 반복문으로 데이터 List 추출
+
+                        for (DataSnapshot snapshot: dataSnapshot.getChildren()) { // 반복문으로 데이터 List 추출
                             Menu menu = snapshot.getValue(Menu.class);
                             // 만들어뒀던 User 객체에 데이터를 담는다.
-                            arrayList.add(menu); // 담은 데이터를 배열리스트에 넣고 리사이클러뷰로 보낼준비
+                            arrayList.add(0,menu); // 담은 데이터를 배열리스트에 넣고 리사이클러뷰로 보낼준비
                         }
                         adapter.notifyDataSetChanged();  // 리스트 저장 및 새로고침
                     }
