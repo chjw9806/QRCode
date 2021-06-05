@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
         Orderbtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this, StarbucksChoiceActivity.class);
+                Intent intent = new Intent(MainActivity.this,CafeListActivity.class);
                 startActivity(intent);
 
                 //Intent intent = new Intent(getApplicationContext(), OrderActivity.class);

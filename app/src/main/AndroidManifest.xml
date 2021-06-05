@@ -18,7 +18,7 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".CafeListActivity"></activity>
         <activity android:name=".EdiyaChoiceActivity" />
-        <activity android:name=".TwosomeChoice" />
+        <activity android:name=".TwosomeChoiceActivity" />
         <activity android:name=".TwosomeOrderActivity" />
         <activity android:name=".EdiyaOrderActivity" />
         <activity android:name=".RandomMenuActivity" />
