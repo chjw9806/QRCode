@@ -28,6 +28,7 @@ public class StarbucksOrderActivity extends AppCompatActivity {
 
     private String DrinkName;
     private String DrinkDetails;
+    private String Nickname;
 
     long mNow = System.currentTimeMillis();
     Date mReDate = new Date(mNow);
@@ -38,6 +39,7 @@ public class StarbucksOrderActivity extends AppCompatActivity {
     String Cafelatte;
     String Vanillalatte;
     static int i =0;
+    public static int j = 0;
 
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -81,14 +83,18 @@ public class StarbucksOrderActivity extends AppCompatActivity {
                 i++;
 
                 UserApiClient.getInstance().me(new Function2<User, Throwable, Unit>() {
+
                     @Override
                     public Unit invoke(User user, Throwable throwable) {
                         DrinkDetails = orderEdit.getText().toString();
 
+                        String nickname = user.getKakaoAccount().getProfile().getNickname();
 
-                         Menu menu = new Menu(DrinkName,DrinkDetails,OrderTime);
 
-                        databaseReference.child("menu").child(user.getKakaoAccount().getProfile().getNickname()).child(i+"번째 주문").setValue(menu);
+                         Menu menu = new Menu(nickname,DrinkName,DrinkDetails,OrderTime);
+
+                        databaseReference.child("menu").child("'"+nickname+"'").child(i+"번째 주문").setValue(menu);
+                        databaseReference.child("menu").child("POS").child(nickname+"고객의"+j+"번째 주문").setValue(menu);
 
                         return null;
 

@@ -37,6 +37,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
+
         holder.tv_Drink.setText("주문음료 : "+arrayList.get(position).getDrink());
         holder.tv_OrderTime.setText("주문일시 : "+arrayList.get(position).getFormatDate());
         holder.tv_Details.setText("요청사항 : "+arrayList.get(position).getDetails());
@@ -50,6 +51,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
 
     public class CustomViewHolder extends RecyclerView.ViewHolder {
+
         TextView tv_Drink;
         TextView tv_OrderTime;
         TextView tv_Details;
@@ -57,6 +59,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
+
 
             this.tv_Drink = itemView.findViewById(R.id.tv_Drink);
             this.tv_OrderTime = itemView.findViewById(R.id.tv_OrderTime);

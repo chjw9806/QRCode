@@ -16,8 +16,6 @@ import com.kakao.sdk.auth.model.OAuthToken;
 import com.kakao.sdk.user.UserApiClient;
 import com.kakao.sdk.user.model.User;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 import kotlin.Unit;
@@ -107,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
         Orderbtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+                Intent intent = new Intent(MainActivity.this, StarbucksChoiceActivity.class);
                 startActivity(intent);
 
                 //Intent intent = new Intent(getApplicationContext(), OrderActivity.class);

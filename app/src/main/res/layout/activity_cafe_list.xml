@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CafeListActivity">
+
+    <Button
+        android:id="@+id/starbucksbtn"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:text="STARBUCKS"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:backgroundTint="#AC9874" />
+
+    <Button
+        android:id="@+id/ediyabtn"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:text="EDIYA"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:backgroundTint="#AC9874" />
+
+    <Button
+        android:id="@+id/twosomebtn"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:text="TWOSOME PLACE"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:backgroundTint="#AC9874" />
+
+</LinearLayout>

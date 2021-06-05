@@ -19,6 +19,7 @@
             android:textAlignment="viewStart"
             android:textStyle="bold" />
 
+
         <TextView
             android:id="@+id/tv_OrderTime"
             android:layout_width="wrap_content"

@@ -19,7 +19,7 @@ import com.kakao.sdk.user.model.User;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 
-public class OrderActivity extends AppCompatActivity {
+public class StarbucksChoiceActivity extends AppCompatActivity {
 
     Button button,button2,button3;
 

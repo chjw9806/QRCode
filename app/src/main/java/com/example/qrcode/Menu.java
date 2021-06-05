@@ -1,7 +1,13 @@
 package com.example.qrcode;
 
+import com.kakao.sdk.user.UserApiClient;
+import com.kakao.sdk.user.model.User;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import kotlin.Unit;
+import kotlin.jvm.functions.Function2;
 
 public class Menu {
 
@@ -19,6 +25,15 @@ public class Menu {
     public void setFormatDate(String formatDate) {
         this.formatDate = formatDate;
     }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+             this.nickname = nickname;
+    }
+    private String nickname;
 
 
 
@@ -46,7 +61,8 @@ public class Menu {
     }
 
 
-    public Menu(String drink,String details,String formatDate){
+    public Menu(String nickname,String drink,String details,String formatDate){
+        this.nickname = nickname;
         this.details = details;
         this.drink = drink;
         this.formatDate = formatDate;
