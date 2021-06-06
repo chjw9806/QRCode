@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         //createQRBtn = (Button) findViewById(R.id.createQR);
         //scanQRBtn = (Button) findViewById(R.id.Orderbtn);
         Orderbtn= findViewById(R.id.Orderbtn);
-        btnOrder = findViewById(R.id.btnOrder);
+        //btnOrder = findViewById(R.id.btnOrder);
         btnList = findViewById(R.id.btnList);
         btnRandom = findViewById(R.id.btnRandom);
 

@@ -18,10 +18,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/eVanilla"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/c3" />
+            app:srcCompat="@drawable/origin3" />
 
     </androidx.cardview.widget.CardView>
 

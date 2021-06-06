@@ -8,13 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.security.Key;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Random;
-import java.util.Set;
 
 public class RandomMenuActivity extends AppCompatActivity {
     public View cardview;
@@ -30,13 +24,13 @@ public class RandomMenuActivity extends AppCompatActivity {
 
         final Random rand = new Random();
         final int[] server_ico = {
-                R.drawable.starbuckslogo,R.drawable.ediya,R.drawable.twosome
+                R.drawable.starbuckslogo,R.drawable.ediyalogo,R.drawable.twosome
         };
         int server_num = rand.nextInt(server_ico.length);
         cardview = findViewById(R.id.cardView2);
 
 
-       final ImageView server_img = (ImageView)findViewById(R.id.imageView7);
+       final ImageView server_img = (ImageView)findViewById(R.id.eVanilla);
        server_img.setImageResource(server_ico[server_num]);
 
 
@@ -54,7 +48,7 @@ public class RandomMenuActivity extends AppCompatActivity {
                 }
             });
         }
-        else if(server_ico[server_num] == R.drawable.ediya) {
+        else if(server_ico[server_num] == R.drawable.ediyalogo) {
             textView14.setText("너의 카페 나의 카페 모두의 카페 이디야로~");
             Intent intent2 = new Intent(getApplicationContext(), EdiyaOrderActivity.class);
             startActivity(intent2);

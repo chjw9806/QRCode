@@ -4,20 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.kakao.sdk.user.UserApiClient;
-import com.kakao.sdk.user.model.User;
-
-import kotlin.Unit;
-import kotlin.jvm.functions.Function2;
 
 public class StarbucksChoiceActivity extends AppCompatActivity {
 
@@ -30,9 +18,9 @@ public class StarbucksChoiceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_order);
 
 
-        button = findViewById(R.id.button);
-        button2 = findViewById(R.id.button2);
-        button3 = findViewById(R.id.button3);
+        button = findViewById(R.id.btnEdiyaAmericano);
+        button2 = findViewById(R.id.btnEdiyaCafelatte);
+        button3 = findViewById(R.id.btnEdiyaDalgona);
 
 
 

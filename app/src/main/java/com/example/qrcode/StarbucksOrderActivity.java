@@ -94,7 +94,7 @@ public class StarbucksOrderActivity extends AppCompatActivity {
                          Menu menu = new Menu(nickname,DrinkName,DrinkDetails,OrderTime);
 
                         databaseReference.child("menu").child("'"+nickname+"'").child(i+"번째 주문").setValue(menu);
-                        databaseReference.child("menu").child("POS").child(nickname+"고객의"+j+"번째 주문").setValue(menu);
+                        databaseReference.child("menu").child("POS").child("STARBUCKS").child(nickname+"고객의"+j+"번째 주문").setValue(menu);
 
                         return null;
 
