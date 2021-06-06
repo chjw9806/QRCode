@@ -30,9 +30,9 @@ public class EdiyaChoiceActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent1 = new Intent(getApplicationContext(), EdiyaOrderActivity.class);
-                intent1.putExtra("EdiyaAmericano","아메리카노");
-                startActivity(intent1);
+                Intent intent = new Intent(getApplicationContext(), EdiyaOrderActivity.class);
+                intent.putExtra("EdiyaAmericano","이디야 아메리카노");
+                startActivity(intent);
 
 
             }
@@ -42,9 +42,9 @@ public class EdiyaChoiceActivity extends AppCompatActivity {
             public void onClick(View v) {
                 {
 
-                    Intent intent2 = new Intent(getApplicationContext(),  EdiyaOrderActivity.class);
-                    intent2.putExtra("EdiyaCafelatte", "아이스 카페라떼");
-                    startActivity(intent2);
+                    Intent intent = new Intent(getApplicationContext(),  EdiyaOrderActivity.class);
+                    intent.putExtra("EdiyaCafelatte", "이디야 카페라떼");
+                    startActivity(intent);
 
 
                 }
@@ -54,9 +54,9 @@ public class EdiyaChoiceActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent3 = new Intent(getApplicationContext(),  EdiyaOrderActivity.class);
-                intent3.putExtra("EdiyaDalgonalatte","달고나 라떼");
-                startActivity(intent3);
+                Intent intent = new Intent(getApplicationContext(),  EdiyaOrderActivity.class);
+                intent.putExtra("EdiyaDalgonalatte","이디야 달고나 라떼");
+                startActivity(intent);
 
 
             }
@@ -65,9 +65,9 @@ public class EdiyaChoiceActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent4 = new Intent(getApplicationContext(),  EdiyaOrderActivity.class);
-                intent4.putExtra("EdiyaVanillalatte","바닐라 라떼");
-                startActivity(intent4);
+                Intent intent = new Intent(getApplicationContext(),  EdiyaOrderActivity.class);
+                intent.putExtra("EdiyaVanillalatte","이디야 바닐라 라떼");
+                startActivity(intent);
 
 
             }
@@ -76,9 +76,9 @@ public class EdiyaChoiceActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent5 = new Intent(getApplicationContext(),  EdiyaOrderActivity.class);
-                intent5.putExtra("EdiyaSignature","이디야 시그니처");
-                startActivity(intent5);
+                Intent intent = new Intent(getApplicationContext(),  EdiyaOrderActivity.class);
+                intent.putExtra("EdiyaSignature","이디야 시그니처");
+                startActivity(intent);
 
 
             }

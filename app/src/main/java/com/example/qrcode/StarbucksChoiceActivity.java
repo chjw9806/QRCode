@@ -8,8 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class StarbucksChoiceActivity extends AppCompatActivity {
-
-    Button button,button2,button3;
+    Button americano, cafemoca, dolce, vanilla,toffenut;
 
 
     @Override
@@ -18,52 +17,67 @@ public class StarbucksChoiceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_order);
 
 
-        button = findViewById(R.id.btnEdiyaAmericano);
-        button2 = findViewById(R.id.btnEdiyaCafelatte);
-        button3 = findViewById(R.id.btnEdiyaDalgona);
+        americano = findViewById(R.id.btnStarAme);
+        vanilla = findViewById(R.id.btnStarVanilla);
+        cafemoca = findViewById(R.id.btnStarCafemoca);
+        dolce = findViewById(R.id.btnStarDolce);
+       toffenut = findViewById(R.id.btnStarToffenut);
 
 
 
-       /* button.setOnClickListener(new View.OnClickListener() {
+        americano.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                databaseReference.child("menu").push().setValue("아이스 아메리카노");
-                Intent intent = new Intent(OrderActivity.this,StarbucksOrderActivity.class);
+
+                Intent intent = new Intent(getApplicationContext(), StarbucksOrderActivity.class);
+                intent.putExtra("StarbucksAmericano","스타벅스 아메리카노");
                 startActivity(intent);
-            }
-        });
-*/
-       button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent1 = new Intent(getApplicationContext(), StarbucksOrderActivity.class);
-                intent1.putExtra("americano","아이스 카페 아메리카노");
-                startActivity(intent1);
 
 
             }
         });
-        button2.setOnClickListener(new View.OnClickListener() {
+        vanilla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 {
 
-                    Intent intent2 = new Intent(getApplicationContext(), StarbucksOrderActivity.class);
-                    intent2.putExtra("cafelatte", "아이스 카페라떼");
-                    startActivity(intent2);
+                    Intent intent = new Intent(getApplicationContext(),  StarbucksOrderActivity.class);
+                    intent.putExtra("StarbucksVanillaLatte", "스타벅스 바닐라라떼");
+                    startActivity(intent);
 
 
                 }
             }
         });
-        button3.setOnClickListener(new View.OnClickListener() {
+        cafemoca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent3 = new Intent(getApplicationContext(), StarbucksOrderActivity.class);
-                intent3.putExtra("vanillalatte","아이스 바닐라 라떼");
-                startActivity(intent3);
+                Intent intent = new Intent(getApplicationContext(),  StarbucksOrderActivity.class);
+                intent.putExtra("StarbucksCafemoca","스타벅스 카페모카");
+                startActivity(intent);
+
+
+            }
+        });
+        dolce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),  StarbucksOrderActivity.class);
+                intent.putExtra("StarbucksDolceLatte","스타벅스 돌페라떼");
+                startActivity(intent);
+
+
+            }
+        });
+        toffenut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),  StarbucksOrderActivity.class);
+                intent.putExtra("Starbucks ToffenutLatte","스타벅스 토피넛라떼");
+                startActivity(intent);
 
 
             }

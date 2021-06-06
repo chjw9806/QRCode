@@ -10,6 +10,8 @@ public class CafeListActivity extends AppCompatActivity {
 
     View starbucks, ediya, twosome;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +39,7 @@ public class CafeListActivity extends AppCompatActivity {
         twosome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),TwosomeOrderActivity.class);
+                Intent intent = new Intent(getApplicationContext(),TwosomeChoiceActivity.class);
                 startActivity(intent);
             }
         });

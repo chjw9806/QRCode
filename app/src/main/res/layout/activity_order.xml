@@ -1,208 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".StarbucksChoiceActivity">
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
-        android:layout_marginBottom="290dp"
-        android:text="WELCOME TO STARBUCKS :)"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnEdiyaAmericano"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="69dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:layout_marginBottom="430dp"
-        app:layout_constraintBottom_toTopOf="@+id/eDalgona"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/starbucks" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/eAmericano"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="111dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnEdiyaCafelatte"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ad" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="374dp"
+                android:layout_height="96dp"
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="375dp"
-        android:text="Order Sheet"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/eAmericano"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0" />
+                app:srcCompat="@drawable/star" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="98dp"
-        android:layout_height="108dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="181dp"
-        android:layout_marginRight="181dp"
-        android:layout_marginBottom="269dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintEnd_toStartOf="@+id/btnEdiyaAmericano"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/origin1"
-        tools:visibility="visible" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Order Coffee"
+                android:textSize="20dp" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="169dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginBottom="320dp"
-        android:text="아이스 카페 아메리카노"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/eAmericano" />
-
-    <ImageView
-        android:id="@+id/eCafeLatte"
-        android:layout_width="88dp"
-        android:layout_height="119dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginEnd="139dp"
-        android:layout_marginRight="139dp"
-        android:layout_marginBottom="151dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnEdiyaCafelatte"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/origin3" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="118dp"
-        android:layout_height="27dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginRight="150dp"
-        android:layout_marginBottom="200dp"
-        android:text="아이스 카페라떼"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/eAmericano"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/eDalgona"
-        android:layout_width="87dp"
-        android:layout_height="102dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginRight="160dp"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintEnd_toStartOf="@+id/btnEdiyaDalgona"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/eCafeLatte"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/origin2" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="아이스 바닐라 라떼"
-        android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/btnEdiyaDalgona" />
-
-    <Button
-        android:id="@+id/btnEdiyaAmericano"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
-        android:layout_marginBottom="311dp"
-        android:text="Order"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/btnEdiyaCafelatte"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="63dp"
-        android:layout_marginRight="63dp"
-        android:layout_marginBottom="73dp"
-        android:text="Order"
-        app:layout_constraintBottom_toTopOf="@+id/btnEdiyaDalgona"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/eCafeLatte"
-        app:layout_constraintTop_toBottomOf="@+id/eAmericano" />
-
-    <Button
-        android:id="@+id/btnEdiyaDalgona"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="43dp"
-        android:layout_marginRight="43dp"
-        android:layout_marginBottom="68dp"
-        android:text="Order"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/eDalgona"
-        app:layout_constraintTop_toBottomOf="@+id/btnEdiyaCafelatte" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="367dp"
+                android:layout_height="114dp"
+                app:srcCompat="@drawable/staraericano" />
 
 
+            <Button
+                android:id="@+id/btnStarAme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Order" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="370dp"
+                android:layout_height="121dp"
+                app:srcCompat="@drawable/starvanillalatte" />
+
+            <Button
+                android:id="@+id/btnStarVanilla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Order" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="336dp"
+                android:layout_height="132dp"
+                app:srcCompat="@drawable/starcafemoca" />
+
+            <Button
+                android:id="@+id/btnStarCafemoca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Order" />
 
 
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="342dp"
+                android:layout_height="128dp"
+                app:srcCompat="@drawable/stardolce" />
+
+            <Button
+                android:id="@+id/btnStarDolce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Order" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="346dp"
+                android:layout_height="145dp"
+                app:srcCompat="@drawable/startoffenut" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/btnStarToffenut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Order" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

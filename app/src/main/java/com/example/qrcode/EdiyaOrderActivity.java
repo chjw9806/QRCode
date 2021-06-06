@@ -19,6 +19,8 @@ import java.util.Date;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 
+import static com.example.qrcode.StarbucksOrderActivity.i;
+
 public class EdiyaOrderActivity extends AppCompatActivity {
     Button drinkOrderbtn;
     EditText orderEdit;
@@ -37,8 +39,8 @@ public class EdiyaOrderActivity extends AppCompatActivity {
     String eDalgona;
     String eVanillalatte;
     String eSignature;
-    static int i =0;
-    public static int k = 0;
+
+    public static int e;
 
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -50,17 +52,17 @@ public class EdiyaOrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ediya_order);
 
-        Intent intent1 = getIntent();
-        Intent intent2 = getIntent();
-        Intent intent3 = getIntent();
-        Intent intent4 = getIntent();
-        Intent intent5 = getIntent();
+        Intent intent= getIntent();
+        //Intent intent2 = getIntent();
+       // Intent intent3 = getIntent();
+       // Intent intent4 = getIntent();
+       // Intent intent5 = getIntent();
 
-        eAmericano = intent1.getStringExtra("EdiyaAmericano");
-        eCafelatte = intent2.getStringExtra("EdiyaCafelatte");
-       eDalgona = intent3.getStringExtra("EdiyaDalgonalatte");
-        eVanillalatte = intent3.getStringExtra("EdiyaVanillalatte");
-        eSignature = intent3.getStringExtra("EdiyaSignature");
+        eAmericano = intent.getStringExtra("EdiyaAmericano");
+        eCafelatte = intent.getStringExtra("EdiyaCafelatte");
+       eDalgona = intent.getStringExtra("EdiyaDalgonalatte");
+        eVanillalatte = intent.getStringExtra("EdiyaVanillalatte");
+        eSignature = intent.getStringExtra("EdiyaSignature");
 
 
         drinkOrderbtn = (Button)findViewById(R.id.drinkOrderbtn);
@@ -90,6 +92,7 @@ public class EdiyaOrderActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 i++;
+                e++;
 
                 UserApiClient.getInstance().me(new Function2<User, Throwable, Unit>() {
 
@@ -103,7 +106,7 @@ public class EdiyaOrderActivity extends AppCompatActivity {
                         Menu menu = new Menu(nickname,DrinkName,DrinkDetails,OrderTime);
 
                         databaseReference.child("menu").child("'"+nickname+"'").child(i+"번째 주문").setValue(menu);
-                        databaseReference.child("menu").child("POS").child("EDIYA").child(nickname+"고객의"+i+"번째 주문").setValue(menu);
+                        databaseReference.child("menu").child("POS").child("EDIYA").child(nickname+"고객의"+e+"번째 주문").setValue(menu);
 
                         return null;
 

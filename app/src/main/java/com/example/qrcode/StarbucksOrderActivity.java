@@ -35,11 +35,13 @@ public class StarbucksOrderActivity extends AppCompatActivity {
     SimpleDateFormat mFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     String OrderTime = mFormat.format(mReDate);
 
-    String Americano;
-    String Cafelatte;
-    String Vanillalatte;
-    static int i =0;
-    public static int j = 0;
+    String sAmericano;
+    String sCafemoca;
+    String sVanillalatte;
+    String sDolce;
+    String sToffenut;
+    static int i;
+    public static int s;
 
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -51,13 +53,14 @@ public class StarbucksOrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_starbucks_order);
 
-        Intent intent1 = getIntent();
-        Intent intent2 = getIntent();
-        Intent intent3 = getIntent();
+        Intent intent = getIntent();
 
-        Americano = intent1.getStringExtra("americano");
-        Cafelatte = intent2.getStringExtra("cafelatte");
-        Vanillalatte = intent3.getStringExtra("vanillalatte");
+
+        sAmericano = intent.getStringExtra("StarbucksAmericano");
+        sVanillalatte = intent.getStringExtra("StarbucksVanillaLatte");
+        sCafemoca = intent.getStringExtra("StarbucksCafemoca");
+        sDolce = intent.getStringExtra("StarbucksDolceLatte");
+        sToffenut = intent.getStringExtra("Starbucks ToffenutLatte");
 
 
         drinkOrderbtn = (Button)findViewById(R.id.drinkOrderbtn);
@@ -65,13 +68,18 @@ public class StarbucksOrderActivity extends AppCompatActivity {
 
 
 
-       if(Americano!=null) {
-           DrinkName = Americano;
-       }else if(Cafelatte!=null){
-           DrinkName = Cafelatte;}
-       else if(Vanillalatte!= null) {
-           DrinkName = Vanillalatte;
-       }else{return;}
+       if(sAmericano!=null) {
+           DrinkName = sAmericano;
+       }else if( sVanillalatte!=null){
+           DrinkName = sVanillalatte;}
+       else if(sCafemoca!= null) {
+           DrinkName =sCafemoca;
+       } else if(sDolce!= null) {
+           DrinkName = sDolce;
+       } else if(sToffenut!= null) {
+           DrinkName = sToffenut;
+       }
+       else{return;}
 
 
 
@@ -81,6 +89,7 @@ public class StarbucksOrderActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 i++;
+                s++;
 
                 UserApiClient.getInstance().me(new Function2<User, Throwable, Unit>() {
 
@@ -94,7 +103,7 @@ public class StarbucksOrderActivity extends AppCompatActivity {
                          Menu menu = new Menu(nickname,DrinkName,DrinkDetails,OrderTime);
 
                         databaseReference.child("menu").child("'"+nickname+"'").child(i+"번째 주문").setValue(menu);
-                        databaseReference.child("menu").child("POS").child("STARBUCKS").child(nickname+"고객의"+j+"번째 주문").setValue(menu);
+                        databaseReference.child("menu").child("POS").child("STARBUCKS").child(nickname+"고객의"+s+"번째 주문").setValue(menu);
 
                         return null;
 
