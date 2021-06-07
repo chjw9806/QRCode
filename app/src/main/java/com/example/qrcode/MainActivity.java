@@ -24,7 +24,7 @@ import kotlin.jvm.functions.Function2;
 
 
 public class MainActivity extends AppCompatActivity {
-    //private Button createQRBtn;
+
     private static final String TAG = "MainActivity";
 
     private View loginButton, logoutButton;
@@ -35,19 +35,17 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = firebaseDatabase.getReference();
 
-    Random random = new Random();
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent = new Intent(this, splashActivity.class);
-        startActivity(intent);
-        //createQRBtn = (Button) findViewById(R.id.createQR);
-        //scanQRBtn = (Button) findViewById(R.id.Orderbtn);
+
+        Intent intent5 = new Intent(this, splashActivity.class);
+        startActivity(intent5);
         Orderbtn= findViewById(R.id.Orderbtn);
-        //btnOrder = findViewById(R.id.btnOrder);
         btnList = findViewById(R.id.btnList);
         btnRandom = findViewById(R.id.btnRandom);
 
@@ -97,30 +95,16 @@ public class MainActivity extends AppCompatActivity {
         updateKakaoLoginUi();
 
 
-        /*createQRBtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this, CreateQR.class);
-                startActivity(intent);
-            }
-        });*/
 
         Orderbtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(MainActivity.this,CafeListActivity.class);
                 startActivity(intent);
 
-                //Intent intent = new Intent(getApplicationContext(), OrderActivity.class);
-               // startActivity(intent);
+
             }
         });
-        /*btnOrder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,OrderActivity.class);
-                startActivity(intent);
-            }
-        });
-*/
+
        btnList.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
