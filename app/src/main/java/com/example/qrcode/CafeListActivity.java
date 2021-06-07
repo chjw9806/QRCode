@@ -17,7 +17,7 @@ public class CafeListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cafe_list);
-
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFFCD853F));
         getSupportActionBar().setTitle("주문하기");
         starbucks = findViewById(R.id.starbuckscard);
         ediya = findViewById(R.id.ediyacard);

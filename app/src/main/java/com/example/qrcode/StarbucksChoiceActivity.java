@@ -3,6 +3,7 @@ package com.example.qrcode;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,7 @@ public class StarbucksChoiceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
-
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFFCD853F));
         getSupportActionBar().setTitle("메뉴판");
 
         americano = findViewById(R.id.btnStarAme);

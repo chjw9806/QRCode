@@ -3,6 +3,7 @@ package com.example.qrcode;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,7 +21,8 @@ public class RandomMenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_random_menu);
-
+        getSupportActionBar().setTitle("랜덤 메뉴 추천");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFFCD853F));
 
         final Random rand = new Random();
         final int[] server_ico = {

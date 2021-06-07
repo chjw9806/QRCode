@@ -3,6 +3,7 @@ package com.example.qrcode;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,7 @@ public class TwosomeChoiceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twosome_choice);
         getSupportActionBar().setTitle("메뉴판");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFFCD853F));
 
         americano = findViewById(R.id.btnTwoAmericano);
         cafemoca = findViewById(R.id.btnTwoCafemoca);

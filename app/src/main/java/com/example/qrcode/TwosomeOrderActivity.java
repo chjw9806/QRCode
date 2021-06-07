@@ -3,6 +3,7 @@ package com.example.qrcode;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -59,6 +60,7 @@ public class TwosomeOrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twosome_order);
         getSupportActionBar().setTitle("주문서");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFFCD853F));
         Intent intent = getIntent();
 
 
