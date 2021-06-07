@@ -17,6 +17,7 @@
         android:theme="@style/Theme.QRCode"
         android:usesCleartextTraffic="true">
         <activity android:name=".CafeListActivity"></activity>
+        <activity android:name=".splashActivity"></activity>
         <activity android:name=".EdiyaChoiceActivity" />
         <activity android:name=".TwosomeChoiceActivity" />
         <activity android:name=".TwosomeOrderActivity" />
