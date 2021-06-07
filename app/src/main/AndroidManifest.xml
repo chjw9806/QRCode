@@ -22,6 +22,9 @@
         <activity android:name=".TwosomeChoiceActivity" />
         <activity android:name=".TwosomeOrderActivity" />
         <activity android:name=".EdiyaOrderActivity" />
+        <activity android:name=".StartbucksRequest" />
+        <activity android:name=".EdiyaRequest" />
+        <activity android:name=".TwoRequest" />
         <activity android:name=".RandomMenuActivity" />
         <activity android:name=".StarbucksOrderActivity" />
         <activity
@@ -30,14 +33,12 @@
         <activity
             android:name=".StarbucksChoiceActivity"
             android:label="카테고리" />
-        <activity
-            android:name=".LoginActivity"
-            android:label="카카오톡으로 로그인하기" />
+
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"
             tools:replace="screenOrientation" />
-        <activity android:name=".CreateQR" />
+
         <activity
             android:name=".MainActivity"
             android:label="">
