@@ -41,7 +41,10 @@
                 android:id="@+id/btnEdiyaAmericano"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Order" />
+                android:text="Order"
+                android:background="@drawable/solid_button"
+                android:textColor="@color/black"
+                app:backgroundTint="#E3CFB2"/>
 
             <ImageView
                 android:id="@+id/eCafeLatte"
@@ -53,7 +56,10 @@
                 android:id="@+id/btnEdiyaCafelatte"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Order" />
+                android:text="Order"
+                android:background="@drawable/solid_button"
+                android:textColor="@color/black"
+                app:backgroundTint="#E3CFB2"/>
 
             <ImageView
                 android:id="@+id/eDalgona"
@@ -65,7 +71,10 @@
                 android:id="@+id/btnEdiyaDalgona"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Order" />
+                android:text="Order"
+                android:background="@drawable/solid_button"
+                android:textColor="@color/black"
+                app:backgroundTint="#E3CFB2"/>
 
 
             <ImageView
@@ -78,7 +87,10 @@
                 android:id="@+id/btnEdiyaVanilla"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Order" />
+                android:text="Order"
+                android:background="@drawable/solid_button"
+                android:textColor="@color/black"
+                app:backgroundTint="#E3CFB2"/>
 
 
             <ImageView
@@ -91,7 +103,10 @@
                 android:id="@+id/btnEdiyaSignature"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Order" />
+                android:text="Order"
+                android:background="@drawable/solid_button"
+                android:textColor="@color/black"
+                app:backgroundTint="#E3CFB2"/>
 
         </LinearLayout>
     </ScrollView>

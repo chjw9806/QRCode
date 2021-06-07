@@ -16,7 +16,7 @@ public class EdiyaChoiceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ediya_choice);
-
+        getSupportActionBar().setTitle("메뉴판");
 
         americano = findViewById(R.id.btnEdiyaAmericano);
         cafelatte = findViewById(R.id.btnEdiyaCafelatte);

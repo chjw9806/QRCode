@@ -52,7 +52,7 @@ public class StarbucksOrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_starbucks_order);
-
+        getSupportActionBar().setTitle("주문서");
         Intent intent = getIntent();
 
 

@@ -49,18 +49,25 @@ public class RandomMenuActivity extends AppCompatActivity {
             });
         }
         else if(server_ico[server_num] == R.drawable.ediyalogo) {
-            textView14.setText("너의 카페 나의 카페 모두의 카페 이디야로~");
-            Intent intent2 = new Intent(getApplicationContext(), EdiyaOrderActivity.class);
-            startActivity(intent2);
+            cardview.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    textView14.setText("너의 카페 나의 카페 모두의 카페 이디야로~");
+                    Intent intent2 = new Intent(getApplicationContext(), EdiyaOrderActivity.class);
+                    startActivity(intent2);
+                }
 
-
+            });
         }
         else if(server_ico[server_num] == R.drawable.twosome){
-            textView14.setText("원두가 살아숨쉬는 투썸으로 당첨!");
-            Intent intent3 = new Intent(getApplicationContext(), TwosomeOrderActivity.class);
-            startActivity(intent3);
+            cardview.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    textView14.setText("원두가 살아숨쉬는 투썸으로 당첨!");
+                    Intent intent3 = new Intent(getApplicationContext(), TwosomeOrderActivity.class);
+                    startActivity(intent3);
 
-
+                }});
 
         }
 

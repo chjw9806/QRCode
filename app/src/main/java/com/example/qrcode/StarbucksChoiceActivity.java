@@ -16,6 +16,7 @@ public class StarbucksChoiceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
 
+        getSupportActionBar().setTitle("메뉴판");
 
         americano = findViewById(R.id.btnStarAme);
         vanilla = findViewById(R.id.btnStarVanilla);

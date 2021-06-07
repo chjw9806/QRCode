@@ -70,10 +70,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="42dp"
-        android:background="@drawable/solid_button"
+        android:background="#BC8979"
         android:text="logout"
         android:textColor="@color/black"
-        app:backgroundTint="#E3CFB2"
+        app:backgroundTint="#BC8979"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

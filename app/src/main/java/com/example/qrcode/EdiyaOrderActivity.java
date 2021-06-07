@@ -51,7 +51,7 @@ public class EdiyaOrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ediya_order);
-
+        getSupportActionBar().setTitle("주문서");
         Intent intent= getIntent();
         //Intent intent2 = getIntent();
        // Intent intent3 = getIntent();

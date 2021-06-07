@@ -3,6 +3,7 @@ package com.example.qrcode;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 
@@ -17,6 +18,7 @@ public class CafeListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cafe_list);
 
+        getSupportActionBar().setTitle("주문하기");
         starbucks = findViewById(R.id.starbuckscard);
         ediya = findViewById(R.id.ediyacard);
         twosome = findViewById(R.id.twosomecard);

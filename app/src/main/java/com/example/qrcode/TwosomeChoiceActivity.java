@@ -16,7 +16,7 @@ public class TwosomeChoiceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twosome_choice);
-
+        getSupportActionBar().setTitle("메뉴판");
 
         americano = findViewById(R.id.btnTwoAmericano);
         cafemoca = findViewById(R.id.btnTwoCafemoca);

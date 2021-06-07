@@ -58,7 +58,7 @@ public class TwosomeOrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twosome_order);
-
+        getSupportActionBar().setTitle("주문서");
         Intent intent = getIntent();
 
 
